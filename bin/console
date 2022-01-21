@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Console\App\Commands\ConvertToFarenheit;
+use Console\App\Commands\ConvertToCelcius;
+
+$app = new Application();
+$app->add(new ConvertToFarenheit());
+$app->add(new ConvertToCelcius());
+$app->run();
